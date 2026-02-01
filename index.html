@@ -53,11 +53,12 @@
 
         .buttons {
             display: flex;
-            gap: 20px;
+            gap: 30px;
             justify-content: center;
+            align-items: center;
             margin-top: 30px;
             position: relative;
-            min-height: 60px;
+            min-height: 80px;
         }
 
         button {
@@ -84,9 +85,7 @@
         #noBtn {
             background: linear-gradient(135deg, #ddd, #ccc);
             color: #666;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
         }
 
         .celebration {
@@ -128,6 +127,19 @@
             font-size: 4em;
             margin: 20px 0;
         }
+
+        .dancing-cat {
+            font-size: 6em;
+            animation: dance 0.5s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes dance {
+            0%, 100% { transform: rotate(-10deg) translateY(0); }
+            25% { transform: rotate(10deg) translateY(-10px); }
+            50% { transform: rotate(-10deg) translateY(0); }
+            75% { transform: rotate(10deg) translateY(-10px); }
+        }
     </style>
 </head>
 <body>
@@ -144,6 +156,7 @@
 
         <div class="celebration" id="celebration">
             <h2>🎉 Yaay! 🎉</h2>
+            <div class="dancing-cat">🐱</div>
             <div class="emoji">😍💖✨</div>
             <p style="font-size: 1.3em; color: #ff69b4; margin-top: 20px;">You've made me the happiest!</p>
         </div>
